@@ -70,7 +70,7 @@ export function HeroSection() {
             >
               Gavel Club of <br />
               University of <br />
-              Sri Jayawardenapura
+              Sri Jayewardenepura
             </motion.h1>
 
             {/* Subtitle */}
