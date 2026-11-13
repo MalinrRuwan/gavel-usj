@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "Table Topics Voter | Gavel Club USJ",
+  description:
+    "Vote for table topics speakers in Gavel Club USJ educational meetings.",
+};
 
 export default function TTVoteLayout({
   children,
