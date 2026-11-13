@@ -22,7 +22,7 @@ The Gavel Club of the University of Sri Jayewardenepura operates under the Caree
 - Events and achievements galleries
 - Podcast integration with YouTube
 - Contact information and social media links
-- Table Topics voter at `/tt-vote` with PIN-based ballots, live admin results, and manual vote entry
+- Table Topics voter at `/vote` with PIN-based ballots, live admin results, and manual vote entry
 
 ## Getting Started
 
@@ -51,8 +51,8 @@ Copy `.env.example` to `.env` and fill in the values. The Table Topics voter nee
 
 ### Table Topics voter
 
-- Public voting: [http://localhost:3000/tt-vote](http://localhost:3000/tt-vote)
-- Admin console: [http://localhost:3000/admin/tt-vote](http://localhost:3000/admin/tt-vote) (uses the existing website admin session)
+- Public voting: [http://localhost:3000/vote](http://localhost:3000/vote) (ballot at [http://localhost:3000/vote/ballot](http://localhost:3000/vote/ballot))
+- Admin console: [http://localhost:3000/admin/vote](http://localhost:3000/admin/vote) (uses the existing website admin session)
 
 ## Project Structure
 

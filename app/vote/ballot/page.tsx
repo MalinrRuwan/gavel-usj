@@ -87,7 +87,7 @@ export default function VotePage() {
     setPinError(null);
 
     try {
-      const response = await fetch(`/api/tt-vote/meetings?pin=${pin.trim()}`);
+      const response = await fetch(`/api/vote/meetings?pin=${pin.trim()}`);
       if (!response.ok) {
         const data = await response.json().catch(() => null);
         setPinError(data?.error || "We couldn't find a session for that PIN.");
@@ -183,7 +183,7 @@ export default function VotePage() {
     setSubmitting(true);
 
     try {
-      const response = await fetch("/api/tt-vote/vote", {
+      const response = await fetch("/api/vote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -291,7 +291,7 @@ export default function VotePage() {
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                <Link href="/tt-vote">
+                <Link href="/vote">
                   <Button className="w-full bg-[#821d1b] text-white hover:bg-[#9b2623]">
                     Back to home
                   </Button>
@@ -372,7 +372,7 @@ export default function VotePage() {
                   {pinLoading ? "Checking..." : "Continue"}
                 </Button>
                 <Link
-                  href="/tt-vote"
+                  href="/vote"
                   className="block text-center text-sm font-medium text-[#821d1b] hover:underline"
                 >
                   ← Back to home

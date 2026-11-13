@@ -21,7 +21,7 @@ export default function TTVotePage() {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-5">
-          <Link href="/tt-vote/vote" className="block">
+          <Link href="/vote/ballot" className="block">
             <Button
               className="w-full bg-[#821d1b] text-white hover:bg-[#9b2623]"
               size="lg"
@@ -32,7 +32,7 @@ export default function TTVotePage() {
           <p className="text-center text-sm text-muted-foreground">
             Club organizer?
             <Link
-              href="/admin/tt-vote"
+              href="/admin/vote"
               className="ml-1 font-semibold text-[#821d1b] underline-offset-4 hover:underline"
             >
               Sign in to the admin console

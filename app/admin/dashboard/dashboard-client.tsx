@@ -308,7 +308,7 @@ export function DashboardClient({ initialBlogs, username }: DashboardClientProps
             <Button
               variant="outline"
               size="sm"
-              onClick={() => router.push("/admin/tt-vote")}
+              onClick={() => router.push("/admin/vote")}
               className="border-zinc-800 text-zinc-400 hover:text-white hover:bg-[#781007] hover:border-[#781007] flex items-center gap-2 cursor-pointer"
             >
               <Vote className="w-4 h-4" />

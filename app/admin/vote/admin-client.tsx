@@ -186,7 +186,7 @@ export function TableTopicsAdmin({ username }: { username: string }) {
       setResultsLoading(true);
     }
     try {
-      const response = await fetch(`/api/tt-vote/vote?tableTopicId=${meetingId}`, {
+      const response = await fetch(`/api/vote?tableTopicId=${meetingId}`, {
         credentials: "include",
       });
       if (!response.ok) {
@@ -291,7 +291,7 @@ export function TableTopicsAdmin({ username }: { username: string }) {
   const fetchMeetings = useCallback(async () => {
     setMeetingsLoading(true);
     try {
-      const response = await fetch("/api/tt-vote/meetings", {
+      const response = await fetch("/api/vote/meetings", {
         credentials: "include",
       });
       if (!response.ok) {
@@ -359,7 +359,7 @@ export function TableTopicsAdmin({ username }: { username: string }) {
 
     setCreateSubmitting(true);
     try {
-      const response = await fetch("/api/tt-vote/meetings", {
+      const response = await fetch("/api/vote/meetings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -395,7 +395,7 @@ export function TableTopicsAdmin({ username }: { username: string }) {
 
   const toggleCollection = async (meeting: TableTopicSummary) => {
     try {
-      const response = await fetch("/api/tt-vote/meetings", {
+      const response = await fetch("/api/vote/meetings", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -430,7 +430,7 @@ export function TableTopicsAdmin({ username }: { username: string }) {
     }
 
     try {
-      const response = await fetch(`/api/tt-vote/meetings?meetingId=${meeting._id}`, {
+      const response = await fetch(`/api/vote/meetings?meetingId=${meeting._id}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -470,7 +470,7 @@ export function TableTopicsAdmin({ username }: { username: string }) {
     setManualVoteError(null);
     setManualVoteSubmitting(true);
     try {
-      const response = await fetch("/api/tt-vote/manual-vote", {
+      const response = await fetch("/api/vote/manual-vote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -737,7 +737,7 @@ export function TableTopicsAdmin({ username }: { username: string }) {
                 Admin dashboard
               </Button>
             </Link>
-            <Link href="/tt-vote/vote" className="hidden sm:inline-flex">
+            <Link href="/vote/ballot" className="hidden sm:inline-flex">
               <Button
                 variant="outline"
                 className="border-[#f0d2d1] bg-white text-[#3d1f1e] hover:bg-[#fef0ef]"

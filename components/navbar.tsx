@@ -11,7 +11,7 @@ const navLinks = [
   { name: "About Us", href: "/#about" },
   { name: "Contact Us", href: "/#contact" },
   { name: "Speech Master", href: "/speechmaster" },
-  { name: "TT Vote", href: "/tt-vote" },
+  { name: "TT Vote", href: "/vote" },
 ];
 
 type NavbarProps = {
